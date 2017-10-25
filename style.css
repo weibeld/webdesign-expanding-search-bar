@@ -42,7 +42,7 @@ header {
   justify-content: space-between;
   /* In order to position search-form absolutely (relative to header) */
   position: relative;  
-  /* Only needed for Versions 2 + 4 to clip content that is pushed out of view */
+  /* Only needed for Variants 2 + 4 to clip content that is pushed out of view */
   overflow: hidden;
 }
 
@@ -68,7 +68,7 @@ header {
 
 
 /*----------------------------------------------------------------------------*
-* Version 1: search bar immediately appearing
+* Variant 1: search bar immediately appearing
 *----------------------------------------------------------------------------*/
 
 /* Search toggle */
@@ -128,7 +128,7 @@ background-color: #8BC34A;
 
 
 /*----------------------------------------------------------------------------*
- * Version 2: search bar sliding in with transition
+ * Variant 2: search bar sliding in with transition
  *----------------------------------------------------------------------------*/
 
 /* Search toggle */
@@ -194,7 +194,7 @@ background-color: #8BC34A;
 
 
 /*----------------------------------------------------------------------------*
- * Version 3: no extra button, search bar appearing immediately
+ * Variant 3: no extra button, search bar appearing immediately
  *----------------------------------------------------------------------------*/
 
 /* Search form */
@@ -243,7 +243,7 @@ background-color: #8BC34A;
 
 
 /*----------------------------------------------------------------------------*
- * Version 4: no extra button, search bar sliding in with 0.3s transition
+ * Variant 4: no extra button, search bar sliding in with 0.3s transition
  *----------------------------------------------------------------------------*/
 
 /* Search form */
