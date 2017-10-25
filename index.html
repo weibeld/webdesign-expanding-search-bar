@@ -6,37 +6,67 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8"/>
 </head>
 
 
 <body>
 
+<div class="caption">Version 1: search bar immediately appearing</div>
 <header>
-  
-  <!-- Left-aligned in header -->
-  <div id="left">
-    <a id="logo-container" href="http://apple.com">
-      <img src="img/logo.png">
-    </a>
-    <a id="title-container" href="index.html">Apple</a>
-  </div>
 
-  <!-- Will be hidden unless search-toggle is clicked -->
-  <form id="search-form" action="index.html" method="get"> 
-    <input type="text" id="search-text" placeholder="Search..." name="query">
-    <button type="submit" id="search-submit">
-      <img id="search-submit-img" src="img/search-colored.svg">
-    </button>
-  </form>
+<!-- Left-aligned in header -->
+<div class="left">
+  <a class="logo-container" href="http://apple.com">
+    <img src="img/logo.png">
+  </a>
+  <a class="title-container" href="index.html">Apple</a>
+</div>
 
-  <!-- Right-aligned in header -->
-  <button id="search-toggle">
-    <img id="search-toggle-img" src="img/search-white.svg">
+<!-- Will be hidden unless search-toggle is activated -->
+<form id="search-form-1" action="index.html" method="get"> 
+  <input type="text" id="search-text-1" placeholder="Search..." name="query">
+  <button type="submit" id="search-submit-1">
+    <img src="img/search-colored.svg">
   </button>
+</form>
+
+<!-- Right-aligned in header -->
+<button id="search-toggle-1">
+  <img id="search-toggle-img-1" src="img/search-white.svg">
+</button>
 
 </header>
 
-<script src="script.js"></script>
+<div class="caption" style="margin-top: 2rem;">Version 2: search bar sliding in with 0.3s transition</div>
+<header>
+
+<!-- Left-aligned in header -->
+<div class="left">
+  <a class="logo-container" href="http://apple.com">
+    <img src="img/logo.png">
+  </a>
+  <a class="title-container" href="index.html">Apple</a>
+</div>
+
+<!-- Will be hidden unless search-toggle is activated -->
+<form id="search-form-2" action="index.html" method="get"> 
+  <input type="text" id="search-text-2" placeholder="Search..." name="query">
+  <button type="submit" id="search-submit-2">
+    <img src="img/search-colored.svg">
+  </button>
+</form>
+
+<!-- Right-aligned in header -->
+<button id="search-toggle-2">
+  <img id="search-toggle-img-2" src="img/search-white.svg">
+</button>
+
+</header>
+
+
+<script src="script-1.js"></script>
+<script src="script-2.js"></script>
 <script src="classie.js"></script>
 
 </body>

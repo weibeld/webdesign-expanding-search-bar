@@ -22,168 +22,63 @@ button {
   cursor: pointer;
 }
 
-/*#navigation-bar {
-    position: relative;
-    height: 60px;
-    background-color: #ddd;
-}
-#search {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 80%;
-    height: 60px;
-}
-#label {
-    width: 60px;
-    height: 60px;
-    z-index: 20;
-}
-#label label {
-    display: block;
-    width: 60px;
-    height: 60px;
-    background: url("search-white.svg") 0 0;
-    text-indent: -9999px;
-    cursor: pointer;
-}
-#label label:hover {
-    background: url("search-black.svg");
-    
-}
-#label.active label {
-    background: url("search-black.svg");
-}
-#input {
-    position: absolute;
-    top: 0;
-    left: 60px;
-    width: 100%;
-    height: 60px;
-    z-index: 5;
-    overflow: hidden;
-}
-#input input {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0 10px;
-    border: none;
-    background-color: #23688b;
-    color: #fff;
-    font-size: 18px;
-    backface-visibility: none;
-    border-radius: 0;
-    transition: left 0;
-}
-#input input:focus {
-    outline: none
-}
-#input.focus {
-  z-index: 20;
-}
-#input.focus input {
-    left: 0;
-    transition: left 0.3s;
+.caption {
+  margin: 0.5rem;
 }
 
-nav {
-    position: relative;
-    left: 70px;
-    z-index: 10;
-}
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-nav li {
-    display: inline-block;
-    height: 60px;
-    line-height: 60px;
-    font-size: 24px;
-    font-family: "Oswald", sans-serif;
-    font-weight: 300;
-    text-transform: uppercase;
-}
-nav a {
-    display: block;
-    padding: 0 15px;
-    color: #c8c8c8;
-}
-nav a:hover {
-    color: #3296c8
-}
-*/
-/*html {
-  font-size: 1.2em;
-}
+/*----------------------------------------------------------------------------*
+ * Common settings
+ *----------------------------------------------------------------------------*/
 
-* {
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Open Sans', sans-serif;
-}
-
-main {
-  padding: 1rem;
-}
-*/
 header {
   height: 3.5rem;
   background-color: #444;
   color: white;
   display: flex;
   justify-content: space-between;
-  /* In order to position search-form absolutely relative to header */
+  /* In order to position search-form absolutely (relative to header) */
   position: relative;  
 }
 
 /* Logo and title */
 
-header #left {
+.left {
   display: flex;
   align-items: center;
 }
 
-#left #logo-container {
+.left .logo-container {
   margin: 0 1rem;
 }
 
-#left #logo-container img {
+.left .logo-container img {
   width: 2rem;
 }
 
-#title-container {
+.left .title-container {
   font-size: 1.4rem;
   color: white;
 }
 
+
+/*----------------------------------------------------------------------------*
+ * Version 1: search bar immediately appearing
+ *----------------------------------------------------------------------------*/
+
 /* Search toggle */
 
-#search-toggle {
+#search-toggle-1 {
   width: 3.5rem;
   background-color: #444;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
 }
 
-#search-toggle:hover {
+#search-toggle-1:hover {
   background-color: #333;
 }
 
 /* Search form */
 
-#search-form {
+#search-form-1 {
   /* Positioned absolutely to header in order to overlay part of header */
   position: absolute;
   right: 3.5rem;  /* Width of search toggle */
@@ -191,81 +86,101 @@ header #left {
   height: 100%;
   display: none;  /* Hide search form by default */
 }
-#search-form.active {
+#search-form-1.active {
   display: flex;  /* Display search form when search toggle is active */
 }
 
 /* Text bar of search form */
-#search-form #search-text {
+#search-text-1 {
   /* Hide everyhing but logo: (100% - search-toggle - search-submit - logo) */
-  width: calc(100vw - 3.5rem - 3.5rem - 4rem + 1px);
+  width: calc(100vw - 3.5rem - 3.5rem - 4rem + 1px);  /* Width of search-text */
   height: 100%;
   font-size: 1.2rem;
   padding: 0 1rem;
   background: #e5e5e5;
   color: #333;
 }
-#search-form #search-text:hover {
+#search-text-1:hover {
   background: #eee;
+}
+/* For mobile portrait: search-form hides all the header, including logo */
+@media screen and (max-width: 400px) {
+  #search-text-1 {
+    width: calc(100vw - 3.5rem - 3.5rem);  /* Width of search-text */
+  }  
 }
 
 /* Submit button of search form */
-#search-form #search-submit {
+#search-submit-1 {
   height: 100%;
   width: 3.5rem;
   background-color: #AED581;
 }
-#search-form #search-submit:hover {
+#search-submit-1:hover {
   background-color: #8BC34A;
 }
 
-/*#search-toggle #search-text {
-  width: calc(100vw - 60px - 4rem);
-  right: 60px; 
-  position: absolute;
-  outline: none;
-  border: none;
-  height:3rem;
-  background: #999;
-  font-size: 1rem;
-  padding: 0 1rem;
-  color: white;
+
+/*----------------------------------------------------------------------------*
+ * Version 2: search bar sliding in with transition
+ *----------------------------------------------------------------------------*/
+
+/* Search toggle */
+
+#search-toggle-2 {
+  width: 3.5rem;
+  background-color: #444;
+  z-index: 1;
 }
 
-#search-toggle #search-text.active {
-  right: 60px;
+#search-toggle-2:hover {
+  background-color: #333;
+}
+
+/* Search form */
+
+#search-form-2 {
+  /* Positioned absolutely to header in order to overlay part of header */
+  position: absolute;
+  right: calc(-1 * (100vw - 3.5rem - 4rem + 1px));  /* Width of search-form */
+  top: 0;
+  height: 100%;
+  display: flex;
+}
+#search-form-2.active {
+  right: 3.5rem;
   transition: right 0.3s;
-}*/
+}
 
+/* Text bar of search form */
+#search-text-2 {
+  /* Hide everyhing but logo: (100% - search-toggle - search-submit - logo) */
+  width: calc(100vw - 3.5rem - 3.5rem - 4rem + 1px);  /* Width of search-text */
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  background: #e5e5e5;
+  color: #333;
+}
+#search-text-2:hover {
+  background: #eee;
+}
+/* For mobile portrait: search-form hides all the header, including logo */
+@media screen and (max-width: 400px) {
+  #search-form-2 {
+    right: calc(-1 * (100vw - 3.5rem)); /* Width of search-form */
+  }
+  #search-text-2 {
+    width: calc(100vw - 3.5rem - 3.5rem);  /* Width of search-text */
+  }  
+}
 
-
-/*
-@media screen and (min-width: 600px) {
-  #search-toggle a:not([id="hamburger"]) {
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-  }
-  #search-toggle #hamburger {
-    display: none;
-  }
-
-
-  header a.icon {
-    float: right;
-    display: block;
-  }
-  .topnav.responsive {
-    position: relative;
-  }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}*/
+/* Submit button of search form */
+#search-submit-2 {
+  height: 100%;
+  width: 3.5rem;
+  background-color: #AED581;
+}
+#search-submit-2:hover {
+  background-color: #8BC34A;
+}
