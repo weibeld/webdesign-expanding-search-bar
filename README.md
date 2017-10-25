@@ -14,7 +14,7 @@ This kind of search bar can be useful in situations where there is **limited hor
 
 ## Summary
 
-There are four slightly different expanding search bars in this repository. In each variant, the search bar appears on a click on the button at the right edge of the header. The newly appeared content "hovers" over the header, that is, it hides everything below it.
+There are four slightly different search bars in this repository. In each variant, the search bar expands on a click on the button at the right edge of the header. The newly appeared content "hovers" over the header, that is, it hides everything below it.
 
 When the search bar is expanded, a search query can be entered and submitted by clicking on the button showing a search icon. The query can also be submitted by hitting *Enter* on the keyboard.
 
@@ -29,7 +29,8 @@ The four variants differ in the structure of the search bar that appears, and in
 
 ### Responsiveness
 
-In the current implementation, the search bar, when it is expanded, hides all of the header except the logo at the left edge of the header, if the viewport width is more than 400px. If the viewport width is 400px or less (typically the case on mobile phones with portrait orientation), the search bar hides the entire header including the logo. This is to allow sufficient space to enter a search query on all screen sizes.
+In the current implementation, the search bar, when it is expanded, hides all of the header except the logo at the left edge of the header, if the viewport width is more than **400px**. If the viewport width is 400px or less (typically the case on mobile phones with portrait orientation), the search bar hides the entire header including the logo. This is to allow sufficient space to enter a search query on all screen sizes.
+
 
 A typical scenario in which this expandable search bar can be used is to display a permanent search bar on large screens, and to resort to an expandable search bar (as implemented here) on smaller screens.
 
@@ -39,7 +40,7 @@ The files `index.html` and `style.css` contain the HTML and CSS code of all the 
 
 ### Design
 
-The search bar is implemented with HTML, CSS, and JavaScript. Below is the role that each of these technologies plays in the design.
+The search bar is implemented with **HTML**, **CSS**, and **JavaScript.** Below is the role that each of these technologies plays in the design.
 
 #### HTML
 
