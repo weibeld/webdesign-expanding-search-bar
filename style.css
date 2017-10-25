@@ -22,6 +22,10 @@ button {
   cursor: pointer;
 }
 
+input {
+  border-radius: 0;
+}
+
 .caption {
   margin: 0.5rem;
 }
@@ -38,6 +42,8 @@ header {
   justify-content: space-between;
   /* In order to position search-form absolutely (relative to header) */
   position: relative;  
+  /* Only needed for Version 2 to clip shifted out search form */
+  overflow: hidden;
 }
 
 /* Logo and title */
