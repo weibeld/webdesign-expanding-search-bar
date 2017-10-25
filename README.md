@@ -82,7 +82,7 @@ Some other minor functions performed by the JavaScript are:
 
 ## Contributing
 
-Tests of these implementations with various platforms and web browsers are welcome! If you encounter incompatibilities or have suggestions, please create an [issue](https://github.com/weibeld/webdesign-expanding-search-bar/issues) or [pull request](https://github.com/weibeld/webdesign-expanding-search-bar/pulls).
+Tests of these implementations with various platforms and web browsers are welcome! If you discover incompatibilities or have suggestions, please create an [issue](https://github.com/weibeld/webdesign-expanding-search-bar/issues) or [pull request](https://github.com/weibeld/webdesign-expanding-search-bar/pulls).
 
 
 ## References
