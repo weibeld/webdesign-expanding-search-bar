@@ -29,7 +29,7 @@ function cleanUp2() {
     if (classie.has(toggle, "active")) {
         toggleImg.src="img/close-white.svg";
         // Delay focussing search bar until transition is complete
-        setTimeout(focusSearchBar, 300);
+        setTimeout(focusSearchBar, 300);  // TODO: test if it works with a smaller delay in all browsers
     }
     else {
         toggleImg.src="img/search-white.svg";

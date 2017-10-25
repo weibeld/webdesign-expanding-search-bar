@@ -68,62 +68,62 @@ header {
 
 
 /*----------------------------------------------------------------------------*
- * Version 1: search bar immediately appearing
- *----------------------------------------------------------------------------*/
+* Version 1: search bar immediately appearing
+*----------------------------------------------------------------------------*/
 
 /* Search toggle */
 
 #search-toggle-1 {
-  width: 3.5rem;
-  background-color: #444;
+width: 3.5rem;
+background-color: #444;
 }
 
 #search-toggle-1:hover {
-  background-color: #333;
+background-color: #333;
 }
 
 /* Search form */
 
 #search-form-1 {
-  /* Positioned absolutely to header in order to overlay part of header */
-  position: absolute;
-  right: 3.5rem;  /* Width of search toggle */
-  top: 0;
-  height: 100%;
-  display: none;  /* Hide search form by default */
+/* Positioned absolutely to header in order to overlay part of header */
+position: absolute;
+right: 3.5rem;  /* Width of search toggle */
+top: 0;
+height: 100%;
+display: none;  /* Hide search form by default */
 }
 #search-form-1.active {
-  display: flex;  /* Display search form when search toggle is active */
+display: flex;  /* Display search form when search toggle is active */
 }
 
 /* Text bar of search form */
 #search-text-1 {
-  /* Hide everyhing but logo: (100% - search-toggle - search-submit - logo) */
-  width: calc(100vw - 3.5rem - 3.5rem - 4rem + 1px);  /* Width of search-text */
-  height: 100%;
-  font-size: 1.2rem;
-  padding: 0 1rem;
-  background: #e5e5e5;
-  color: #333;
+/* Hide everyhing but logo: (100% - search-toggle - search-submit - logo) */
+width: calc(100vw - 3.5rem - 3.5rem - 4rem + 1px);  /* Width of search-text */
+height: 100%;
+font-size: 1.2rem;
+padding: 0 1rem;
+background: #e5e5e5;
+color: #333;
 }
 #search-text-1:hover {
-  background: #eee;
+background: #eee;
 }
 /* For mobile portrait: search-form hides all the header, including logo */
 @media screen and (max-width: 400px) {
-  #search-text-1 {
-    width: calc(100vw - 3.5rem - 3.5rem);  /* Width of search-text */
-  }  
+#search-text-1 {
+  width: calc(100vw - 3.5rem - 3.5rem);  /* Width of search-text */
+}  
 }
 
 /* Submit button of search form */
 #search-submit-1 {
-  height: 100%;
-  width: 3.5rem;
-  background-color: #AED581;
+height: 100%;
+width: 3.5rem;
+background-color: #AED581;
 }
 #search-submit-1:hover {
-  background-color: #8BC34A;
+background-color: #8BC34A;
 }
 
 
@@ -189,4 +189,53 @@ header {
 }
 #search-submit-2:hover {
   background-color: #8BC34A;
+}
+
+
+/*----------------------------------------------------------------------------*
+ * Version 3: no extra button, search bar appearing immediately
+ *----------------------------------------------------------------------------*/
+
+/* Search form */
+
+#search-form-3 {
+  height: 100%;
+  /* In order to position search-text absolutely (relative to search-form) */
+  position: relative;
+}
+
+/* Text bar of search form */
+#search-text-3 {
+  position: absolute;
+  top: 0;
+  right: 3.5rem;  /* Width of search-submit */
+  display: none;  /* Hidden until search-submit is clicked */
+  width: calc(100vw - 3.5rem - 4rem + 1px);  /* Width of search-text */
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  background: #e5e5e5;
+  color: #333;
+}
+#search-text-3:hover {
+  background: #eee;
+}
+/* For mobile portrait: search-form hides all the header, including logo */
+@media screen and (max-width: 400px) {
+  #search-text-3 {
+    width: calc(100vw - 3.5rem);  /* Width of search-text */
+  }  
+}
+#search-text-3.active {
+  display: initial;
+}
+
+/* Submit button of search form */
+#search-submit-3 {
+  height: 100%;
+  width: 3.5rem;
+  background-color: #444;
+}
+#search-submit-3:hover {
+  background-color: #333;
 }

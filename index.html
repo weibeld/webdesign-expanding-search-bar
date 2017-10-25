@@ -2,16 +2,17 @@
 <html>
 
 <head>
+  <meta charset="utf-8"/>
   <title>Expanding Search Bar</title>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8"/>
 </head>
 
 
 <body>
 
+<!-- Version 1 -->
 <div class="caption">Version 1: search bar immediately appearing</div>
 <header>
 
@@ -38,6 +39,9 @@
 
 </header>
 
+
+
+<!-- Version 2 -->
 <div class="caption" style="margin-top: 2rem;">Version 2: search bar sliding in with 0.3s transition</div>
 <header>
 
@@ -65,8 +69,35 @@
 </header>
 
 
+
+<!-- Version 3 -->
+<div class="caption" style="margin-top: 2rem;">Version 3:</div> 
+<header>
+
+<!-- Left-aligned in header -->
+<div class="left">
+  <a class="logo-container" href="http://apple.com">
+    <img src="img/logo.png">
+  </a>
+  <a class="title-container" href="index.html">Apple</a>
+</div>
+
+<!-- Right-aligned in header -->
+<form id="search-form-3" action="index.html" method="get" onsubmit="return isSubmitForm(event);"> 
+  <!-- Will be hidden unless search-toggle is activated -->
+  <input type="text" id="search-text-3" placeholder="Search..." name="query">
+  <button type="submit" id="search-submit-3">
+    <img src="img/search-white.svg">
+  </button>
+</form>
+
+</header>
+
+
+<!-- Scripts for Versions 1-4 and classie library -->
 <script src="script-1.js"></script>
 <script src="script-2.js"></script>
+<script src="script-3.js"></script>
 <script src="classie.js"></script>
 
 </body>
