@@ -5,7 +5,6 @@
     // Capture clicks on search submit buton
     toggle.addEventListener("click", function(event) {
         event.stopPropagation();
-        classie.toggleClass(toggle, "active");
         classie.toggleClass(searchBar, "active");
         if (classie.has(searchBar, "active")) searchBar.focus();
     });
@@ -14,9 +13,9 @@
     document.addEventListener("click", function(e) {
         var clickedID = e.target.id;
         if (clickedID != "search-submit-3" && clickedID != "search-text-3") {
-            if (classie.has(toggle, "active")) {
-                classie.remove(toggle, "active");
+            if (classie.has(searchBar, "active")) {
                 classie.remove(searchBar, "active");
+                searchBar.value = null;
             }
         }
     });

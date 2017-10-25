@@ -5,7 +5,6 @@
     // Capture clicks on search submit buton
     toggle.addEventListener("click", function(event) {
         event.stopPropagation();
-        classie.toggleClass(toggle, "active");
         classie.toggleClass(searchBar, "active");
         if (classie.has(searchBar, "active"))
             setTimeout(focusSearchBar4, 300);  // TODO: test if it works with a smaller delay in all browsers
@@ -15,9 +14,9 @@
     document.addEventListener("click", function(e) {
         var clickedID = e.target.id;
         if (clickedID != "search-submit-4" && clickedID != "search-text-4") {
-            if (classie.has(toggle, "active")) {
-                classie.remove(toggle, "active");
+            if (classie.has(searchBar, "active")) {
                 classie.remove(searchBar, "active");
+                searchBar.value = null;
             }
         }
     });
