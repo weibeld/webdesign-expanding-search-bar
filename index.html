@@ -71,7 +71,7 @@
 
 
 <!-- Version 3 -->
-<div class="caption" style="margin-top: 2rem;">Version 3:</div> 
+<div class="caption" style="margin-top: 2rem;">Version 3: no extra search button, search bar appearing immediately</div> 
 <header>
 
 <!-- Left-aligned in header -->
@@ -94,10 +94,36 @@
 </header>
 
 
+
+<!-- Version 4 -->
+<div class="caption" style="margin-top: 2rem;">Version 4: no extra search button, search bar sliding in with 0.3s transition</div> 
+<header>
+
+<!-- Left-aligned in header -->
+<div class="left">
+  <a class="logo-container" href="http://apple.com">
+    <img src="img/logo.png">
+  </a>
+  <a class="title-container" href="index.html">Apple</a>
+</div>
+
+<!-- Right-aligned in header -->
+<form id="search-form-4" action="index.html" method="get" onsubmit="return isSubmitForm(event);"> 
+  <!-- Will be hidden unless search-toggle is activated -->
+  <input type="text" id="search-text-4" placeholder="Search..." name="query">
+  <button type="submit" id="search-submit-4">
+    <img src="img/search-white.svg">
+  </button>
+</form>
+
+</header>
+
+
 <!-- Scripts for Versions 1-4 and classie library -->
 <script src="script-1.js"></script>
 <script src="script-2.js"></script>
 <script src="script-3.js"></script>
+<script src="script-4.js"></script>
 <script src="classie.js"></script>
 
 </body>

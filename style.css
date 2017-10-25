@@ -136,7 +136,7 @@ background-color: #8BC34A;
 #search-toggle-2 {
   width: 3.5rem;
   background-color: #444;
-  z-index: 1;
+  z-index: 1;  /* Display it in front of search-form */
 }
 
 #search-toggle-2:hover {
@@ -148,7 +148,8 @@ background-color: #8BC34A;
 #search-form-2 {
   /* Positioned absolutely to header in order to overlay part of header */
   position: absolute;
-  right: calc(-1 * (100vw - 3.5rem - 4rem + 1px));  /* Width of search-form */
+  /* Width of search-form minus width of search-toggle */
+  right: calc(-1 * (100vw - 3.5rem - 4rem + 1px - 3.5rem));  
   top: 0;
   height: 100%;
   display: flex;
@@ -237,5 +238,58 @@ background-color: #8BC34A;
   background-color: #444;
 }
 #search-submit-3:hover {
+  background-color: #333;
+}
+
+
+/*----------------------------------------------------------------------------*
+ * Version 4: no extra button, search bar sliding in with 0.3s transition
+ *----------------------------------------------------------------------------*/
+
+/* Search form */
+
+#search-form-4 {
+  height: 100%;
+  /* In order to position search-text absolutely (relative to search-form) */
+  position: relative;
+}
+
+/* Text bar of search form */
+#search-text-4 {
+  position: absolute;
+  top: 0;
+  /* Width of search-text minus width of search-submit */
+  right: calc(-1 * (100vw - 3.5rem - 4rem + 1px - 3.5rem));
+  width: calc(100vw - 3.5rem - 4rem + 1px);  /* Width of search-text */
+  height: 100%;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  background: #e5e5e5;
+  color: #333;
+}
+#search-text-4:hover {
+  background: #eee;
+}
+/* For mobile portrait: search-form hides all the header, including logo */
+@media screen and (max-width: 400px) {
+  #search-text-4 {
+    width: calc(100vw - 3.5rem);
+    right: calc(-1 * (100vw - 3.5rem) - 3.5rem);
+  }  
+}
+#search-text-4.active {
+  right: 3.5rem;  /* Width of search-submit */
+  transition: right 0.3s;
+}
+
+/* Submit button of search form */
+#search-submit-4 {
+  height: 100%;
+  width: 3.5rem;
+  background-color: #444;
+  position: relative;  /* In order to make z-index work */
+  z-index: 1;  /* Display it in front of search-text */
+}
+#search-submit-4:hover {
   background-color: #333;
 }
