@@ -28,7 +28,7 @@
  * Returns false (form is not submitted) if the search bar is empty (because
  * the submit button has been clicked only to expand/collapse the search bar). 
  * Returns true otherwise (form is submitted).*/
-function isSubmitForm(event) {
+function isSubmitForm3(event) {
     var text = document.getElementById("search-text-3").value;
     if (text == null || text == "")
         return false;
