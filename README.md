@@ -89,6 +89,8 @@ Tests of these implementations with various platforms and web browsers are welco
 
 - The present implementation is inspired from this blog post
     - <http://callmenick.com/post/expanding-search-bar-using-css-transitions>
+- Another expanding search bar example
+    - <https://tympanus.net/codrops/2013/06/26/expanding-search-bar-deconstructed/>
 - Classie.js
     - <http://callmenick.com/post/add-remove-and-check-classes>
 
